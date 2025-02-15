@@ -11,7 +11,7 @@ module up_down_counter_tb;
     wire [3:0] out;
 
     // Instantiate the DUT (Device Under Test)
-    up_down_counter uut (
+    up_down_counter dut (
         .on(on),
         .up_down(up_down),
         .clk(clk),
@@ -19,7 +19,6 @@ module up_down_counter_tb;
         .out(out)
     );
 
-    // Clock Generation (50MHz -> 20ns period)
     always #5 clk = ~clk;
 
     initial begin
